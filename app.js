@@ -13,12 +13,11 @@ const scoresRouter = require("./routes/score");
 const app = express();
 
 const corsOptions = {
-  origin: "", // TODO
+  origin: "https://wheres-waldo-4vcmdcqnl-manuelam2003s-projects.vercel.app",
   optionsSuccessStatus: 200,
 };
 
-// TODO
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 if (process.env.NODE_ENV === "development") {
   app.use(logger("dev"));
